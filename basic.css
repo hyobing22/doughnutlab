@@ -1,0 +1,413 @@
+
+
+/*basic,header,footer,font, form style*/
+
+    /* 1. 브라우저 기본 스타일 초기화 */
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+
+    /* 2. 링크 스타일 초기화 */
+    a{text-decoration: none; display: inline-block; color: #000;}
+
+    /* 3. 목록(리스트) 스타일 초기화 */
+    ul{list-style: none;}
+
+    /* 4. 미디어 요소 기본 세팅 */
+    img, video {display: block; max-width: 100%;}
+
+    /* 5. 폰트 세팅 */
+    body {font-family: 'Noto Sans KR', sans-serif; line-height: 1.5; font-size: 24px; overflow-x: hidden; font-weight: 400;}
+
+    /*제일 큰 거 .extra, h1: 80(헤더 강조문)     .extraBig: 100(푸터), veiwMenu
+    섹션제목 h2: 42 / 55
+    부제목 : h3: 32
+    본문 body : 24, 26, 28
+    캡션 notice, caption : 20
+    버튼 CTA button: 42*/
+
+    h2{
+        font-size: 1.5em; /* 36px */
+        font-family: 'Geist', sans-serif;
+        font-weight: 700;
+    }
+    h3 {font-size: 0.9em;} /* 서브타이틀 (26px) */
+    h4 {font-size: 1.3em;} /* 32px */
+    h5 {font-size: 0.8em;} /* 20px */
+
+    .extra{ /*p style 타이틀*/
+        font-size: 3.3em; /* 80px */
+        font-family: 'Geist', sans-serif;
+        font-weight: 800;
+    }
+    .extraBig{ /*p style 타이틀*/
+        font-size: 3.3em; /* 80px */
+        font-family: 'Geist', sans-serif;
+        font-weight: 800;
+    }
+    .semiBold{
+        font-weight: 600;
+    }
+    .CTA{ /*a style*/
+        font-size: 1.3em; /* 30px */
+        font-family: 'Geist', sans-serif;
+        font-weight: 600;
+        padding: 0 40px;
+        border-radius: 9999px;
+        line-height: 2;
+    }
+    .btn{ /*CTA style text align 따로 주기*/
+        display: block;
+    }
+    button{
+        font-family: 'Geist', sans-serif;
+        font-weight: 600;
+    }
+
+    
+    /*layout*/
+    .inner{
+        width: 1450px;
+        margin: 0 auto;
+    }
+    section{padding: 150px 0;}
+
+    main>section:last-child{
+        position: relative;
+        padding-bottom: 200px;
+    }
+
+        
+/*header, footer style*/
+
+    /*header*/
+    
+    header{
+        width: 100%; 
+        position: fixed; 
+        left: 0; 
+        top: 0; 
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    header>h1>a{
+        width: 250px;
+        height: 60px;
+        text-indent: -99999px;
+        background: url(images/icon/brand_Logo.svg)no-repeat 0 0;
+        background-size: cover;
+        position: absolute;
+        left: 40px;
+        top: 25px;
+    }
+
+    
+    nav{
+        display: flex; 
+        width: max-content;
+        padding: 0 20px;
+        height: 54px;
+        background-color: #ccc;
+        position: relative;
+        border-radius: 999px;
+    }
+    .nav_first{display: none;}
+    nav ul{
+        display: flex; 
+        gap: 70px; 
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+    nav a{
+        font-family: 'Geist', sans-serif;
+        font-size: 20px; 
+        font-weight: 600;
+        padding: 10px 20px; 
+        color: #ffffff;
+        line-height: 54px;
+    }
+    nav li{z-index: 2;}
+    #nav_bar{
+        width: 145px;
+        height: 47px;
+        background: #000;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        margin: 3px 3px 3px 4px;
+        border-radius: 999px;
+    }
+
+
+
+
+    /*footer*/
+    footer{
+        padding: 100px 0 50px; 
+        position: relative;
+    }
+
+    footer .inner{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .footer_info{
+        display: flex;
+        gap: 80px;
+    }
+
+    .footer_sns ul{
+        display: flex;
+        gap: 44px;
+    }
+
+    footer a{font-size: 20px;}
+    footer li:first-child{margin-bottom: 8px;}
+
+    .footer_info01{
+        width: max-content; 
+        margin-left: 10px; 
+    }
+    .footer_input01{
+        font-size: 24px; 
+        font-weight: 600; 
+        margin-bottom: 5px;
+    }
+    .footer_input02{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .footer_input03{
+        width: 90%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        /*배경은 페이지마다 다름*/
+    }
+    .footer_inputimg{
+        padding: 0 20px;
+        height: 100%;
+        line-height: 60px;
+        background: #000;
+    }
+    .footer_inputimg>img{
+        margin-top: 10px;
+    }
+
+    .footer_inputText{
+        width: 100%;
+        font-size: 18px;
+        padding-left: 18px;
+        line-height: 60px;
+        border:none;
+    }
+    
+    .footer_inputSubmit{
+        text-align: center;
+        line-height: 60px;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 0 19px;
+    }
+    .footer_input03 label::before{
+        content: '';
+        background: #333;
+        width: 2px;
+        height: 22px;
+        position: absolute;
+        top:19px
+    }
+
+    .footer_info02{width: max-content;}
+    .footer_info03{width: max-content;}
+
+    .footer_logo{
+        font-size: 110px;
+        font-family: 'Geist', sans-serif;
+        font-weight: 900;
+        opacity: 90%;
+    }
+
+    .footer_object{
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        position: absolute;
+        top: -150px;
+        right: 0;
+    }
+
+
+    /*form*/
+    input{border: none; background: none;}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+    body{font-size: 19px;}
+
+    .inner{max-width: 90%; overflow: hidden;}
+
+    section{
+        padding: 120px 0;
+    }
+
+    .CTA{
+        padding: 0 25px;
+        line-height: 2.3;
+    }
+
+
+    /*header*/
+
+    header{
+        padding: 24px 0;
+    }
+
+    header > h1 > a{
+        width: 170px;
+        height: 46px;
+        background-size: contain;
+    }
+
+    nav{
+        width: 446px;
+        height: 43px;
+        padding: 0;
+    }
+
+    nav ul{
+        gap: 22px;
+        margin: 0 auto !important;
+    }
+
+    nav a{
+        font-size: 0.9em;
+        padding: 0 20px !important;
+        line-height: 43px;
+    }
+
+    #nav_bar{
+        width: 110px;
+        height: 36px;
+        margin: 4px;
+        border-radius: 999px;
+    }
+
+
+    /*FOOTER*/
+
+    footer {
+        /* 1. PC 화면(기존 1920px) 대비 현재 화면 너비의 비율만큼 전체를 축소합니다 */
+        transform: scale(calc(100vw / 1920));
+        
+        /* 2. 축소 기준점을 왼쪽 위로 잡아서 레이아웃이 화면 중앙으로 쏠리지 않게 합니다 */
+        transform-origin: top left;
+        
+        /* 3. scale을 쓰면 껍데기 크기는 그대로 남아 여백이 생기므로, 너비를 강제로 늘려줍니다 */
+        width: calc(1920px * (100vw / 1920));}
+
+    footer .footer_input03{
+        width: 100%;
+    }
+    
+    footer p,footer a{
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+    
+     
+    body {
+        font-size: 15px; /*24px -> 15px*/
+        line-height: 1.6;
+    }
+
+    /* 3. 버튼 (CTA) 크기 및 패딩 조정 */
+    .CTA {
+        font-size: 1.1em; /* 약 16.5px */
+        padding: 0 24px;   /* 모바일 화면 너비에 맞게 패딩 축소 */
+        line-height: 2.2;
+    }
+
+    .inner{max-width: 90%; overflow: hidden;}
+
+    section{
+        padding: 120px 0;
+    }
+
+    .CTA{
+        padding: 0 25px;
+        line-height: 2.3;
+    }
+
+
+    /*header*/
+
+    header{
+        padding: 0;
+    }
+
+    header > h1 > a{
+        background: none;
+    }
+
+    nav{
+        width: 100vw;
+        height: 60px;
+        border-radius: 0;
+    }
+    .nav_first{display: block;}
+
+    nav ul{
+        gap: 0;
+        margin: 0 auto !important;
+        justify-content: space-around !important;
+        width: 100%;
+    }
+
+    nav a{
+        font-size: 0.9em;
+        padding: 0 14px !important;
+        line-height: 60px;
+    }
+
+    #nav_bar{
+        width: 20%;
+        height: 100%;
+        border-radius: 0;
+        margin: 0 auto;
+    }
+
+
+
+
+}

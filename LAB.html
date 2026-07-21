@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doughnut LAB</title>
+    <link rel="stylesheet" type="text/css" href="basic.css">
+    <link rel="stylesheet" type="text/css" href="section.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icon/Subtract.svg">
+</head>
+    <style>
+
+        
+        .idea_title{
+            border: 1px red solid;
+            margin-bottom: 35px;
+        }
+        .idea_body{
+            border: 1px red solid;
+            margin-bottom: 90px;
+        }
+
+    /*form style*/
+        .required{color: #FF7AAA;}
+
+        .btn{background: #000;}
+        form{
+            background: #eee;
+            width: 100%;
+            border: 1px red solid;
+            width: 100%;
+            padding: 70px;
+        }
+        form legend{
+            margin-bottom: 60px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        form fieldset{
+            border: none;
+        }
+        .form_grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+        .idea_input label,
+        .idea_input input{
+            display: block;
+            font-size: 20px;
+        }
+        
+
+        .idea_input label{
+            margin-bottom: 14px;
+        }
+        .idea_input input{
+            width: 90%;
+            height: 60px;
+            background: #d2d2d2;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            padding-left: 22px;
+        }
+        textarea{
+            resize: none;
+            width: 90%;
+            height: 100px;
+            background: #d2d2d2;
+            border-radius: 8px;
+            padding-left: 22px;
+            border: none;
+        }
+        
+
+        /*right style*/
+        .form_right{
+            position: relative;
+        }
+        .form_right button{
+            padding: 16px 20px;
+            position: absolute; 
+            bottom: 0; left: 0;
+            font-size: 20px;
+            color: #fff;
+            background: #000;
+        }
+        .user_info{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .guidance_text p{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .checkbox_item{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .checkbox_item input{
+            width: 24px;
+            height: 24px;
+            display: inline;
+        }
+
+
+
+
+    /*main style*/
+        .LAB_01_main{
+            background: black; 
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bg{
+            width: max-content;
+            position: absolute; 
+            bottom: 0; right: 0;
+            background: url(images/joinLAB/flaskicon.png)no-repeat 0 0;
+        background-size: cover;
+        background-attachment: fixed;
+            
+        }
+
+        .LABmain{
+            padding-top: 250px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .LAB_maintitle{
+            margin-bottom: 30px;
+            color: #FFFF00;
+        }
+
+        .LAB_subtitle{
+            color: #fff;
+            font-size: 1.3em;
+        }
+
+        .LAB_reviewPrev{
+            position: absolute;
+            padding-top: 100px;
+            right: 0;
+        }
+
+        .LAB_reviewPrev ul{
+            background: #000; 
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .LAB_reviewPrev li{
+            background: #fff; 
+            width: max-content;
+            border-radius: 15px;
+        }
+
+        .btn{display: none;}
+
+        
+
+
+
+        /*.LAB_02_review{
+            background: orange;
+        }*/
+
+        .review{
+            background: #ffe3c9;
+            display: flex;
+            gap: 50px;
+            justify-content: space-between;
+        }
+
+        .review_form{
+            border: 1px red solid;
+            max-width: 900px;
+            flex-shrink: 0
+        }
+        .review_right{
+            height: max-content;
+            align-self: flex-end;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+        .review_title{
+            border: 1px red solid;
+        }
+        .review_body{
+            border: 1px red solid;
+        }
+
+        .review_button{
+            background: white
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+    </style>
+<body>
+    <main>
+        <!--header-->
+        <header>
+            <h1><a href="index.html">Doughnut LAB</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="MENU.html">MENU</a></li>
+                    <li><a href="LAB.html">LAB</a></li>
+                    <li><a href="#">ORDER</a></li>
+                </ul>
+                <div id="nav_bar"></div>
+            </nav>
+        </header>
+        
+
+        <!--section 01-->
+        <section class="LAB_01_main">
+            <div class="LABmain inner">
+                <hgroup>
+                    <h2 class="LAB_maintitle extra">
+                        Hello,<br>
+                        Researcher !
+                    </h2>
+                    <h3 class="LAB_subtitle">
+                        이곳은 모두와 함께 Doughnut LAB의 다음 시리즈를<br>
+                        만들어가는 공간입니다.<br><br>
+                        오늘은 어떤 이야기를 남겨주시겠어요?
+                    </h3>
+                </hgroup>
+                <div class="LAB_reviewPrev">
+                    <ul>
+                        <li><img src="image/reviewIMG1.png" width="460"></li>
+                        <li><img src="image/reviewIMG1.png" width="460"></li>
+                        <li><img src="image/reviewIMG1.png" width="460"></li>
+                        <li><img src="image/reviewIMG1.png" width="460"></li>
+                        <li><img src="image/reviewIMG1.png" width="460"></li>
+                        <li><img src="image/reviewIMG1.png" width="460"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bg"></div>
+        </section>
+
+        <!--section 02-->
+        <section class="LAB_02_review">
+            <div class="review inner">
+
+
+                <form class="review_form">
+                    <legend>리뷰 작성</legend>
+                </form>
+
+
+                <div class="review_right">
+                    <h2 class="review_title">메뉴에 대한 피드백을 남겨주세요!</h2>
+                    <p class="review_body">
+                        경험한 메뉴의 리뷰를 별점과 함께 작성해 주세요.<br>
+                        메뉴를 보며 떠오른 이야기나 개선점, 느낀 점을 
+                        자유롭게 남겨주세요.
+                        맛에 대한 피드백은 레시피를 개선하는 데 참고되며,메뉴를 보며 떠올린 이야기와 감상은 앞으로의 
+                        시리즈를 기획하는 과정에 소중한 영감이 됩니다.
+                        모든 리뷰는 익명으로 작성됩니다.<br>
+                    </p>
+                    <p class="btn"><a href="#" class="review_button">연구원들의 리뷰 보기</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!--section 03-->
+        <section class="main_04_joinLAB">
+            <div class="joinLAB inner">
+                <h2 class="joinLAB_title">NEXT EXPERIMENT :&nbsp;&nbsp;&nbsp;&nbsp;다음 시리즈의 주인공이 되어주세요.</h2>
+                <h3 class="joinLAB_subtitle">
+                    Doughnut LAB 의 새로운 실험 아이디어의 시안입니다.<br>
+                    아래에서 가장 기대되는 다음 메뉴에 투표해 주세요.
+                </h3>
+                <div class="joinLAB_cards">
+                    <ul>
+                        <li class="joinLAB_cards01">
+                            <div class="joinLAB_cards_img">
+                                <span class="cardBanner_dessert">Dessert Menu</span>
+                            </div>
+                            <div class="joinLAB_cards_content">
+                                <h5>당근 머핀</h5>
+                                <p>
+                                    고소하고 촉촉한 
+                                    당근 듬뿍 머핀!
+                                </p>
+                                <button>투표하기</button>
+                            </div>
+                        </li>
+
+                        <li class="joinLAB_cards01">
+                            <div class="joinLAB_cards_img">
+                                <span class="cardBanner_dessert">Dessert Menu</span>
+                            </div>
+                            <div class="joinLAB_cards_content">
+                                <h5>당근 머핀</h5>
+                                <p>
+                                    고소하고 촉촉한 
+                                    당근 듬뿍 머핀!
+                                </p>
+                                <button>투표하기</button>
+                            </div>
+                        </li>
+
+                        <li class="joinLAB_cards01">
+                            <div class="joinLAB_cards_img">
+                                <span class="cardBanner_dessert">Dessert Menu</span>
+                            </div>
+                            <div class="joinLAB_cards_content">
+                                <h5>당근 머핀</h5>
+                                <p>
+                                    고소하고 촉촉한 
+                                    당근 듬뿍 머핀!
+                                </p>
+                                <button>투표하기</button>
+                            </div>
+                        </li>
+
+                        <li class="joinLAB_cards01">
+                            <div class="joinLAB_cards_img">
+                                <span class="cardBanner_dessert">Dessert Menu</span>
+                            </div>
+                            <div class="joinLAB_cards_content">
+                                <h5>당근 머핀</h5>
+                                <p>
+                                    고소하고 촉촉한 
+                                    당근 듬뿍 머핀!
+                                </p>
+                                <button>투표하기</button>
+                            </div>
+                        </li>
+
+                        <li class="joinLAB_cards01">
+                            <div class="joinLAB_cards_img">
+                                <span class="cardBanner_dessert">Dessert Menu</span>
+                            </div>
+                            <div class="joinLAB_cards_content">
+                                <h5>당근 머핀</h5>
+                                <p>
+                                    고소하고 촉촉한 
+                                    당근 듬뿍 머핀!
+                                </p>
+                                <button>투표하기</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p class="joinLAB_notice">
+                    현재 선택지에 없는 새로운 메뉴가 출시되거나 추가될 수 있습니다.<br>
+                    운영 상황 및 제반 사정에 따라 기존 계획이나 일정이 일부 변경될 수 있습니다.<br>
+                    시안 이미지는 AI로 제작된 이미지입니다.<br>
+                </p>
+            </div>
+        </section>
+
+        <!--section 04-->
+        <section class="LAB_04_idea">
+            <div class="idea inner">
+                <h2 class="idea_title">새로운 실험을 제안해 보세요.</h2>
+                <p class="idea_body">
+                    Doughnut LAB은  완벽한 답을 찾는 공간이 아니라, 다양한 가능 성을 탐색하는 실험실입니다. <br>
+                    디저트로 표현해 보고 싶은 아이디어가 있다면 자유롭게 제안해 주세요!<br>
+                    일상 속에서 문득 떠오른 작은 상상이나, 재미있다고 느낀 조합, 
+                    혹은 한 번쯤 만들어 보고 싶었던 디저트에 대한 생각까지 모두 환영합니다.
+                </p>
+
+                <form class="idea_form">
+                    <fieldset>
+                        <legend>아이디어 작성</legend>
+                        
+                        <div class="form_grid">
+                            <!-- form-leftContent -->
+                            <div class="form_left">
+
+                                <!--input01-->
+                                <div class="idea_input">
+                                    <label for="topic">
+                                        주제에 대해 간단히 설명해주세요. 
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="topic" placeholder="ex ) 도넛 보트를 타는 러버덕" required>
+                                </div>
+                                
+                                <!--input02-->
+                                <div class="idea_input">
+                                    <label for="inspiration">
+                                        어떤 것에서 영감을 받았나요? 
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="inspiration" placeholder="ex ) 욕조에 둥둥 떠다니는 러버덕 장난감을 봤어요." required>
+                                </div>
+                                
+                                <!--input03-->
+                                <div class="idea_input">
+                                    <label for="memory">
+                                        왜 이 장면이 기억에 남았나요? 
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input type="text" id="memory" placeholder="ex ) 어릴 적 추억이 생각났어요." required>
+                                </div>
+                                
+                                <!--input04-->
+                                <div class="idea_input">
+                                    <label>메뉴 스케치를 글로 적거나, 파일을 업로드 해주세요. (선택)</label>
+                                    <!-- 파일 업로드 영역 -->
+                                    <div class="file_upload_box">
+                                        <label for="upload_file"></label>
+                                        <input type="file" id="upload_file" hidden>
+                                    </div>
+                                    <!-- 텍스트 설명 영역 -->
+                                    <textarea id="sketch_desc" placeholder="상상하는 디저트의 생김새와 맛을 설명해주세요."></textarea>
+                                </div>
+                            </div>
+
+
+
+                            <!-- form-rightContent -->
+                            <div class="form_right">
+                                <div class="form_right01">
+                                    <h3>보내주신 아이디어가 선발되면<br>경품과 함께 연락처로 개별 연락을 드립니다.</h3>
+                                </div>
+
+                                <div class="user_info">
+                                    <div class="idea_input">
+                                        <label for="username">이름/닉네임 입력 <span class="required">*</span></label>
+                                        <input type="text" id="username" placeholder="연구원1234" required>
+                                    </div>
+                                    <div class="idea_input">
+                                        <label for="contact">연락처/이메일 입력 <span class="required">*</span></label>
+                                        <input type="email" id="contact" placeholder="example@email.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="idea_input">
+                                    <label for="agree_privacy" class="checkbox_item">
+                                        <input type="checkbox" id="agree_privacy" required>
+                                        <span>[필수] 개인정보 수집 및 이용 동의</span>
+                                    </label>
+                                    
+                                    <div class="guidance_text">
+                                        <p>모든 아이디어가 실제 메뉴로 제작되지는 않습니다.</p>
+                                        <p>선발된 아이디어는 새로운 시리즈로 발전하여 실제 메뉴로 공개될 수도 있습니다.</p>
+                                        <p>여러분이 보내주신 모든 이야기들은 Doughnut LAB의 LAB NOTE에 기록되며, 다음 실험을 위한 소중한 영감으로 남습니다.</p>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="submit_btn">아이디어 제출하기</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <!--section 05-->
+        <section class="LAB_05_contentEnd">
+            <div class="contentEnd inner">
+                <div class="contentend_line"><img src="image/contentend_line.png"></div>
+                <h2 class="contentEnd_title">Continue...</h2>
+                <p class="contentEnd_body">
+                    연구원들이 열심히 새로운 디저트를 실험 중입니다.<br>
+                    조만간 공개될 다음 시리즈를 기대해 주세요!
+                </p>
+                <p class="btn"><a href="#" class="contentEnd_CTA_order">메뉴 주문하러 가기</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <div class="footer_object"></div>
+        <div class="footer inner">
+            <div class="footer_sns">
+                <ul>
+                    <li><a href="#"><img src="images/icon/footer/instagramLogo.svg" alt="instagram" width="60"></a></li>
+                    <li><a href="#"><img src="images/icon/footer/xLogo.svg" alt="x" width="60"></a></li>
+                    <li><a href="#"><img src="images/icon/footer/facebookLogo.svg" alt="facebook" width="60"></a></li>
+                    <li><a href="#"><img src="images/icon/footer/youtubeLogo.svg" alt="youtube" width="60"></a></li>
+                </ul>
+            </div>
+            <div class="footer_info">
+                <div class="footer_info01">
+                    <p class="footer_input01 semiBold">Doughnut LAB의 새로운 소식을 받아보세요</p>
+                    <p class="footer_input02">
+                        알림 신청 시 마케팅 소식 수신 및 개인정보<br>
+                        수집에 동의하게 됩니다.
+                    </p>
+                    <div class="footer_input03">
+                        <p class="footer_inputimg"><img src="images/icon/footer/footer_inputLabel.svg" height="40"></p>
+                        <input type="text" placeholder="example@email.com" id="user-email" class="footer_inputText">
+                        <label for="user-email"></label>
+                        <input type="submit" placeholder="신청" class="footer_inputSubmit">
+                    </div>
+                </div>
+                <ul class="footer_info02">
+                    <li><a href="#" class="semiBold">Resources</a></li>
+                    <li><a href="#">Trems & conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Manage Cookies</a></li>
+                </ul>
+                <ul class="footer_info03">
+                    <li><a href="#" class="semiBold">Contact Us</a></li>
+                    <li><a href="#">info@doughnutlab.com</a></li>
+                    <li><a href="#">02-1234-5678</a></li>
+                </ul>
+            </div>
+            <p class="footer_logo">Doughnut LAB</p>
+        </div>
+    </footer>
+</body>
+</html>

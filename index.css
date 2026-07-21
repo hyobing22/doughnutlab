@@ -1,0 +1,309 @@
+@import url(basic.css);
+@import url(Agpt.css);/**/
+
+
+/*footer 개별 스타일*/
+footer{
+        background: #FEC80E;
+    }
+    .footer_object{
+        background: url(images/icon/footer/main_footerIMG.svg);
+    }
+    .footer_input03{
+        background: #FFF4CD;
+    }
+
+/*모바일 콘텐츠*/
+.viewmanu_mobileBG{
+    display: none;
+}
+
+    /*01-hero*/
+    .main_01_hero{
+        height: 150vh; 
+        padding: 0; 
+        background: url(images/main/hero_background_IMG1.png)no-repeat 0 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .hero{
+        display: flex; 
+        flex-direction: column; 
+        height: 100%; 
+        align-items: center;
+        justify-content: center;
+    }
+    .hero_title{color: #fff;}
+    .hero_subtitle{
+        font-size: 1.5em; /*36px*/
+        text-align: center;
+        color: #fff;
+    }
+    .hero hgroup{
+        margin-top: 25%;
+    }
+    .hero_brandCopy{
+        width: 100%; 
+        height: 600px; 
+        position: relative;
+        margin-top: auto;
+        background: url(images/main/hero_background_IMG2.png)no-repeat 0 0;
+        background-size: cover;
+        border-radius: 50px 50px 0 0;
+    }
+    .hero_brandCopy p{
+        position: absolute; 
+        width: max-content;
+        bottom: 50px; 
+        left: 50%;
+        transform: translate(-50%);
+        mix-blend-mode: overlay;
+        color: yellow;
+    }
+    
+
+
+
+    /*02-aboutbrand*/
+    .aboutbrand{
+        display: flex;
+        gap: 45px;
+        min-height: 650px;
+        justify-content: space-between;
+        position: relative;
+    }
+    .aboutbrand_left{
+        flex-grow: 1;
+        background: url(images/main/aboutbrand_left.png)no-repeat 0 0;
+        background-size: cover;
+        border-radius: 15px;
+        height: 600px;
+    }
+    .aboutbrand_right{
+        width: 60%; 
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 600px;
+    }
+    
+    .aboutbrand_title{
+        color: #ff7AAA;
+    }
+
+    .aboutbrand_CTA{
+        background: rgb(255, 158, 158);
+    }
+    .aboutbrand .btn{
+        padding-top: 70px;
+        text-align: right;
+    }
+    
+
+
+
+    /*03viewmenu*/
+    .main_03_viewmenu{
+        padding-bottom: 350px;
+    }
+
+    .viewmenu_cards{
+        position: relative; 
+        height: max-content; 
+        width: 100vw; 
+        overflow: hidden;
+    } 
+
+    .viewmenu_cards ul{
+        display: flex;
+        width: max-content;
+        gap: 30px;
+    }
+
+    .viewmenu_cards li{
+        width: max-content;/*여백1/2까지 포함한 너비이어야 됨*/
+    }
+    .viewmenu_CTA{background: rgb(9, 255, 29)}
+    .viewmenu .btn{text-align: right;}
+
+
+
+
+
+    /*05reservation*/
+    .main_05_reservation{
+        padding-top: 300px; 
+    }
+
+    .reservation_title{
+        border-bottom: 1px black solid; 
+        margin-bottom: 80px;
+    }
+
+    .reservation_cards{
+        display: flex; 
+        justify-content: space-between;
+        width: 100%;
+        height: max-content;
+        gap: 30px;
+    }
+
+    .reservation_cards_store1,
+    .reservation_cards_store2{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        max-width: 50%;
+        height: max-content;
+    }
+    
+    .reservation_CTA{background: #FF4646;}
+    .reservation .btn{text-align: right; padding-top: 100px;}
+        
+@media screen and (max-width: 1024px){
+
+
+    /*hero*/
+
+    .main_01_hero{
+        height: 120vh !important;
+    }
+
+    .hero{
+        height: 100%;
+    }
+
+    .hero_subtitle{
+        font-size: 1.5em;
+    }
+
+    .hero hgroup{
+        margin-top: 27vh !important;
+    }
+
+    .hero_brandCopy{
+        width: 100%;
+        max-height: 40vh;
+        border-radius: 40px 40px 0 0;
+    }
+
+    .hero_brandCopy p{
+        bottom: 40px;
+        font-size: 3em;
+        max-width: 875px;
+    }
+
+
+
+
+
+
+    /*aboutbrand*/
+    .main_02_aboutbrand{padding: 70px 0 50px;}
+    .aboutbrand{
+        background: url(images/main/aboutbrand_left.png)no-repeat 0 0;
+        background-size: cover;
+        position: relative;
+        min-height: 710px !important;
+    }
+
+    
+
+    .aboutbrand_right{
+        background: none;
+        padding: 20px 20px;
+        background: rgba(255, 255, 255, 0.9);
+        position: absolute;
+        height: max-content !important;
+        top: 40px;
+        right: 40px;
+        gap: 10px !important;
+        border-radius: 15px;
+        min-width: 552px;
+    }
+
+    .aboutbrand .btn{
+        padding-top: 110px !important;
+    }
+
+
+
+
+
+    /*viewmenu*/
+
+    .main_03_viewmenu{
+        padding-bottom: 150px !important;
+        position: relative;
+    }
+
+    .viewmenu_cards{
+        width: 100vw;
+        height: max-content;
+    }
+
+    .viewmenu_cards ul{
+        width: max-content;
+        gap: 24px;
+    }
+
+    .viewmenu_cards li{
+        width: max-content;
+    }
+
+    .viewmenu_cards img{
+    width: 760px;          
+    height: 60vh;
+    object-fit: cover;
+    }
+    .viewmenu .btn{position: absolute; bottom: 150px; right: 60px;}
+
+
+
+
+
+
+    /*05 RESERVATION */
+
+    .main_05_reservation{
+        padding-top: 130px !important;
+    }
+
+    .reservation_title{
+        padding-bottom: 30px;
+        margin-bottom: 64px;
+    }
+
+    .reservation_cards{
+        flex-direction: column;
+    }
+    .reservation_cards img{
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    .reservation_cards_store1,
+    .reservation_cards_store2{
+        gap: 16px !important;
+        max-width: 100% !important;
+        height: max-content;
+    }
+
+    .reservation_cards_store1{
+        padding-bottom: 70px;
+        border-bottom: 1px solid gray;
+    }
+    .reservation_cards_store2{
+        margin-top: 70px;
+    }
+    
+    .reservation .btn{
+        padding-top: 80px;
+    }
+
+}
+
+@media screen and (max-width:768px){
+   
+}
